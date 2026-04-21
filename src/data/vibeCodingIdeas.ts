@@ -13,17 +13,18 @@ export interface VibeIdea {
 
 export const vibeCodingIdeas: VibeIdea[] = [
   {
-    id: "github-knowledge-pool",
-    title: "GitHub ナレッジプール",
-    titleEn: "GitHub Knowledge Pool",
+    id: "knowledge-pool-pwa",
+    title: "ナレッジプール PWA",
+    titleEn: "Knowledge Pool PWA",
     summary:
-      "YouTube / Web 記事の URL を GitHub Issue に貼るだけで、GitHub Actions が字幕・本文を取得し Gemini で日本語要約、タグ付き Markdown として private リポジトリに自動 commit・Issue クローズまで行う個人用ナレッジ基盤。スマホからでも投下できて GitHub の全文検索で横断的に引ける。",
+      "URL をペーストするだけで Gemini が日本語要約し、検索・タグ絞り込み・再実行・削除までアプリ内で完結する個人ナレッジ基盤。iPhone ホーム画面から 1 タップで投稿でき、GitHub OAuth で自分だけが見られる private PWA。当初は GitHub Issue 起点で実装したが、モバイル UX を極端に良くするため Next.js + Supabase に置き換え。",
     stack: [
-      "GitHub Actions",
+      "Next.js 16",
+      "Supabase",
+      "Postgres + RLS",
       "Gemini 2.5 Flash",
-      "TypeScript",
-      "Readability",
-      "YouTube Transcript",
+      "Vercel",
+      "PWA",
     ],
     status: "shipped",
     priority: true,

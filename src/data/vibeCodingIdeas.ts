@@ -17,9 +17,15 @@ export const vibeCodingIdeas: VibeIdea[] = [
     title: "GitHub ナレッジプール",
     titleEn: "GitHub Knowledge Pool",
     summary:
-      "YouTube / 記事 / Podcast の URL を GitHub Issue に投げると、GitHub Actions が字幕・本文を取得し LLM で要約。ラベル付き Markdown として knowledge/ に commit、GitHub の全文検索で横断的に引き出せる自分だけのナレッジ基盤。",
-    stack: ["GitHub Actions", "LLM API", "yt-dlp", "Markdown", "TypeScript"],
-    status: "in-progress",
+      "YouTube / Web 記事の URL を GitHub Issue に貼るだけで、GitHub Actions が字幕・本文を取得し Gemini で日本語要約、タグ付き Markdown として private リポジトリに自動 commit・Issue クローズまで行う個人用ナレッジ基盤。スマホからでも投下できて GitHub の全文検索で横断的に引ける。",
+    stack: [
+      "GitHub Actions",
+      "Gemini 2.5 Flash",
+      "TypeScript",
+      "Readability",
+      "YouTube Transcript",
+    ],
+    status: "shipped",
     priority: true,
   },
   {

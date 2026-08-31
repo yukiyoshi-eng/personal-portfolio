@@ -28,7 +28,7 @@ export default function Contact() {
                 メールを送る
               </a>
               <a
-                href="https://github.com/sakaguchiyukiyoshi"
+                href="https://github.com/yukiyoshi-eng"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 rounded-xl glass-card text-[var(--text-primary)] text-sm font-semibold hover:border-[#8b5cf6] transition-colors"

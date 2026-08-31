@@ -9,7 +9,7 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/sakaguchiyukiyoshi"
+            href="https://github.com/yukiyoshi-eng"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--text-secondary)] hover:text-[#a78bfa] transition-colors"

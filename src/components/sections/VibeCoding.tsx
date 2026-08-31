@@ -5,9 +5,6 @@ import { Sparkles, Repeat, Rocket } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SkillBadge from "@/components/ui/SkillBadge";
-import GitHubIcon from "@/components/icons/GitHubIcon";
-import { vibeCodingIdeas, VibeStatus } from "@/data/vibeCodingIdeas";
-import { cn } from "@/lib/utils";
 
 const tools = [
   "Claude Code",
@@ -35,21 +32,6 @@ const flowSteps = [
   },
 ];
 
-const statusLabel: Record<VibeStatus, string> = {
-  planned: "Planned",
-  "in-progress": "In Progress",
-  shipped: "Shipped",
-};
-
-const statusStyle: Record<VibeStatus, string> = {
-  planned:
-    "bg-[rgba(100,116,139,0.12)] text-[var(--text-secondary)] border-[rgba(100,116,139,0.3)]",
-  "in-progress":
-    "bg-[rgba(139,92,246,0.15)] text-[#a78bfa] border-[rgba(139,92,246,0.4)]",
-  shipped:
-    "bg-[rgba(34,197,94,0.12)] text-[#4ade80] border-[rgba(34,197,94,0.35)]",
-};
-
 export default function VibeCoding() {
   return (
     <section id="vibe" className="py-24 px-6 relative overflow-hidden">
@@ -62,12 +44,12 @@ export default function VibeCoding() {
       <div className="max-w-6xl mx-auto relative z-10">
         <SectionHeading
           title="Vibe Coding"
-          subtitle="AIエージェントと共に開発するスタイルと、これから作るもの"
+          subtitle="AIエージェントと共に開発するスタイル"
         />
 
-        {/* Block A: Philosophy + Tools + Flow */}
+        {/* Philosophy + Tools + Flow */}
         <ScrollReveal delay={0.1}>
-          <div className="glass-card rounded-2xl p-8 md:p-10 mb-14">
+          <div className="glass-card rounded-2xl p-8 md:p-10">
             <div className="grid md:grid-cols-5 gap-8">
               <div className="md:col-span-3 space-y-4">
                 <h3 className="text-lg font-bold gradient-text">
@@ -125,84 +107,6 @@ export default function VibeCoding() {
             </div>
           </div>
         </ScrollReveal>
-
-        {/* Block B: Roadmap */}
-        <ScrollReveal delay={0.15}>
-          <div className="flex items-end justify-between mb-6">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-[var(--text-primary)]">
-                Roadmap
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mt-1">
-                バイブコーディングで作る、公開予定の成果物候補
-              </p>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {vibeCodingIdeas.map((idea, i) => (
-            <ScrollReveal key={idea.id} delay={0.1 + i * 0.05}>
-              <motion.article
-                className={cn(
-                  "glass-card rounded-2xl p-5 h-full flex flex-col",
-                  idea.priority &&
-                    "ring-1 ring-[rgba(139,92,246,0.4)] shadow-lg shadow-[rgba(139,92,246,0.15)]"
-                )}
-                whileHover={{ y: -3 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="flex items-start justify-between gap-3 mb-3">
-                  <div className="min-w-0">
-                    <h4 className="text-base font-bold text-[var(--text-primary)] leading-snug">
-                      {idea.title}
-                    </h4>
-                    <p className="text-xs text-[var(--text-muted,#64748b)] mt-0.5">
-                      {idea.titleEn}
-                    </p>
-                  </div>
-                  <span
-                    className={cn(
-                      "shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold border whitespace-nowrap",
-                      statusStyle[idea.status]
-                    )}
-                  >
-                    {statusLabel[idea.status]}
-                  </span>
-                </div>
-
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed flex-1 mb-4">
-                  {idea.summary}
-                </p>
-
-                <div className="flex flex-wrap gap-1.5 mb-3">
-                  {idea.stack.map((s) => (
-                    <span
-                      key={s}
-                      className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-[var(--bg-glass)] border border-[var(--border-glass)] text-[var(--text-secondary)]"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-
-                {idea.repoUrl && (
-                  <div className="pt-3 border-t border-[var(--border-glass)]">
-                    <a
-                      href={idea.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-[var(--text-secondary)] hover:text-[#a78bfa] transition-colors"
-                    >
-                      <GitHubIcon size={14} />
-                      Repository
-                    </a>
-                  </div>
-                )}
-              </motion.article>
-            </ScrollReveal>
-          ))}
-        </div>
       </div>
     </section>
   );

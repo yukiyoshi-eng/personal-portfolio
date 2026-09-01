@@ -18,6 +18,7 @@ export interface Project {
   techs: TechBadge[];
   githubUrl?: string;
   demoUrl?: string;
-  imageUrl?: string;
+  imageUrl?: string | StaticImageData;
   featured?: boolean;
 }
+import type { StaticImageData } from "next/image";

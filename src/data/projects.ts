@@ -1,6 +1,27 @@
 import { Project } from "@/types";
+import shinguBousaiImage from "../../public/projects/shingu-bousai.jpg";
 
 export const projects: Project[] = [
+  {
+    id: "shingu-bousai",
+    title: "しんぐう防災マップ（非公式）",
+    titleEn: "Shingu Disaster Preparedness Map",
+    descriptionJa:
+      "福岡県新宮町の平時の備えを支援する防災マップ。国土地理院の公式ハザード情報、現在地、避難施設、地点保存を、バックエンドなしの静的Webアプリとして実装。スマートフォン操作と町周辺への地図範囲制限にも対応。",
+    descriptionEn:
+      "A static disaster preparedness map for Shingu, Fukuoka, combining official hazard layers, geolocation, shelters, and local-only saved places in a mobile-friendly interface.",
+    category: "Frontend",
+    techs: [
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Leaflet" },
+      { name: "Vite" },
+      { name: "Cloudflare Workers" },
+    ],
+    demoUrl: "https://shingu-bousai.shingu-bousai.workers.dev",
+    imageUrl: shinguBousaiImage,
+    featured: true,
+  },
   {
     id: "pamiq-core",
     title: "pamiq-core",

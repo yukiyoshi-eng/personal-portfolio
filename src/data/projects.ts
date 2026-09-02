@@ -28,9 +28,9 @@ export const projects: Project[] = [
     title: "LiftLog",
     titleEn: "Offline Weight Training Tracker",
     descriptionJa:
-      "通信やアカウント登録なしで使える筋トレ記録PWA。セット編集、前回記録の再利用、履歴管理、期間別の負荷・最大重量・連続日数・部位別分析、JSONバックアップをIndexedDB上に実装。",
+      "通信やアカウント登録なしで使える筋トレ記録PWA。74種目を器具・部位・お気に入りから複合検索でき、セット編集、前回記録の再利用、履歴管理、期間別分析、JSONバックアップをIndexedDB上に実装。",
     descriptionEn:
-      "An installable offline-first workout PWA with editable sets, reusable previous workouts, local history, period-based performance analytics, and JSON backup—all stored in IndexedDB.",
+      "An installable offline-first workout PWA with a 74-exercise catalog, combined equipment and muscle filters, editable sets, reusable previous workouts, performance analytics, and JSON backup.",
     category: "Frontend",
     techs: [
       { name: "Next.js 16" },

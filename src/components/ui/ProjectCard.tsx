@@ -27,7 +27,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             src={project.imageUrl}
             alt={project.titleEn}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className={`object-cover transition-transform duration-500 group-hover:scale-105 ${
+              project.id === "weight-training" ? "object-top" : ""
+            }`}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">

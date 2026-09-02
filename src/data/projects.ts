@@ -1,5 +1,6 @@
 import { Project } from "@/types";
 import shinguBousaiImage from "../../public/projects/shingu-bousai.jpg";
+import liftLogImage from "../../public/projects/liftlog.jpg";
 
 export const projects: Project[] = [
   {
@@ -20,6 +21,28 @@ export const projects: Project[] = [
     ],
     demoUrl: "https://shingu-bousai.shingu-bousai.workers.dev",
     imageUrl: shinguBousaiImage,
+    featured: true,
+  },
+  {
+    id: "weight-training",
+    title: "LiftLog",
+    titleEn: "Offline Weight Training Tracker",
+    descriptionJa:
+      "通信やアカウント登録なしで使える筋トレ記録PWA。セット編集、前回記録の再利用、履歴管理、期間別の負荷・最大重量・連続日数・部位別分析、JSONバックアップをIndexedDB上に実装。",
+    descriptionEn:
+      "An installable offline-first workout PWA with editable sets, reusable previous workouts, local history, period-based performance analytics, and JSON backup—all stored in IndexedDB.",
+    category: "Frontend",
+    techs: [
+      { name: "Next.js 16" },
+      { name: "TypeScript" },
+      { name: "Dexie.js" },
+      { name: "Recharts" },
+      { name: "PWA" },
+      { name: "Vitest" },
+    ],
+    githubUrl: "https://github.com/yukiyoshi-eng/weight-training-app",
+    demoUrl: "https://yukiyoshi-eng.github.io/weight-training-app/",
+    imageUrl: liftLogImage,
     featured: true,
   },
   {
@@ -73,23 +96,6 @@ export const projects: Project[] = [
       { name: "Rails API" },
       { name: "TypeScript" },
       { name: "Barcode API" },
-    ],
-  },
-  {
-    id: "weight-training",
-    title: "Weight Training App",
-    titleEn: "Weight Training Tracker",
-    descriptionJa:
-      "トレーニング記録をブラウザで完結させるフィットネスアプリ。IndexedDB（Dexie.js）によるオフライン対応、Recharts を使ったパフォーマンスグラフ表示を実装。",
-    descriptionEn:
-      "A client-side fitness tracking app with offline support via IndexedDB, interactive performance charts using Recharts, and a clean TypeScript architecture.",
-    category: "Frontend",
-    techs: [
-      { name: "Next.js 16" },
-      { name: "TypeScript" },
-      { name: "Recharts" },
-      { name: "Dexie.js" },
-      { name: "IndexedDB" },
     ],
   },
   {
